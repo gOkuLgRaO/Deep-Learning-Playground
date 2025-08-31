@@ -1,4 +1,6 @@
+# ----------------
 # Python
+# ----------------
 __pycache__/
 *.py[cod]
 *.pyo
@@ -9,10 +11,6 @@ __pycache__/
 *.log
 *.sqlite3
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
 # Virtual environment
 venv/
 .env/
@@ -20,20 +18,42 @@ venv/
 env/
 ENV/
 
-# OS files
+# ----------------
+# Jupyter
+# ----------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ----------------
+# IDE configs
+# ----------------
+# VSCode
+.vscode/
+# PyCharm / IntelliJ
+.idea/
+
+# ----------------
+# OS junk files
+# ----------------
 .DS_Store
 Thumbs.db
 
-# Torch / Datasets
+# ----------------
+# ML / Data
+# ----------------
+# Datasets
 data/
+# Torch models
 *.pt
 *.pth
 *.ckpt
+# Numpy / Pickle results
+*.npy
+*.pkl
 
-# Results
-results/*.npy
-results/*.pkl
+# ----------------
+# Results folder (optional: keep only final plots)
+# ----------------
+results/*.tmp
 results/*.ckpt
-
-# VSCode
-.vscode/
+results/*.log
