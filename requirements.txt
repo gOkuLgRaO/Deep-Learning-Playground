@@ -1,6 +1,6 @@
-numpy
-matplotlib
-scikit-learn
-torch
-torchvision
-torchtext
+torch==2.2.0
+torchvision==0.17.0
+torchtext==0.17.0
+numpy==1.26.4
+matplotlib==3.9.2
+scikit-learn==1.5.2

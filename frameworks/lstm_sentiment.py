@@ -31,7 +31,7 @@ def preprocess_data(vocab, max_len=200):
         ids = [vocab[token] for token in tokens]
         return torch.tensor(ids, dtype=torch.long)
     def process_batch(batch):
-        texts, labels = zip(*batch)
+        labels, texts = zip(*batch)
         encoded = [encode(t)[:max_len] for t in texts]
         padded = pad_sequence(encoded, batch_first=True, padding_value=vocab["<pad>"])
         labels = torch.tensor([1 if l == "pos" else 0 for l in labels], dtype=torch.long)
